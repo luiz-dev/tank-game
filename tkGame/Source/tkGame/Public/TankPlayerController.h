@@ -14,7 +14,7 @@ class TKGAME_API ATankPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	
-public:
+private:
 
 	ATank* GetTankControled() const;
 	
@@ -25,7 +25,11 @@ public:
 	//intersects with the world
 	void AimTowardsCrossHair();
 
-private:
 	//return an out parameter, true if hit the landscape
 	bool GetSightRayHitLocation(FVector& HitLocation) const;
+
+	UPROPERTY(EditAnywhere)
+	float CrossHairXLocation = 0.5;
+	UPROPERTY(EditAnywhere)
+	float CrossHairYLocation = 0.3333;
 };
