@@ -15,7 +15,8 @@ class TKGAME_API UTankBarrel : public UStaticMeshComponent
 	
 	
 public:
-	void Elevate(float Degrees);
+	//-1 is min value, and +1 is the max value
+	void Elevate(float RelativeSpeed);
 private:
 	UPROPERTY(EditAnywhere, Category = Setup)
 	float MaxDegreesPerSecond = 20;
