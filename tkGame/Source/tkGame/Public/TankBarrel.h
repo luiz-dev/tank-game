@@ -8,7 +8,7 @@
 /**
  * 
  */
-UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
+UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent), hidecategories = ("Collision"))
 class TKGAME_API UTankBarrel : public UStaticMeshComponent
 {
 	GENERATED_BODY()
@@ -19,5 +19,11 @@ public:
 private:
 	UPROPERTY(EditAnywhere, Category = Setup)
 	float MaxDegreesPerSecond = 20;
+
+	UPROPERTY(EditAnywhere, Category = Setup)
+	float MaxElevationDegrees = 40;
+
+	UPROPERTY(EditAnywhere, Category = Setup)
+	float MinElevationDegrees = 0;
 	
 };
